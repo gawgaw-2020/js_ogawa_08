@@ -1,0 +1,277 @@
+
+/*---------------------------------------------------------------------
+
+home
+
+---------------------------------------------------------------------*/
+.menu {
+  .login-name {
+    margin-bottom: 20px;
+  }
+  .cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    &--col2 > .cards__item{
+      width: calc((100% - 16px) / 2);
+      margin: 0 4px 10px 4px;
+    }
+  }
+}
+
+
+/*---------------------------------------------------------------------
+
+login section
+
+---------------------------------------------------------------------*/
+
+.login {
+  h1 {
+    margin-bottom: 56px;
+    img {
+      width: 50%;
+      max-width: 280px;
+      margin: 24px auto 0;
+    }
+  }
+  .login-form {
+    .text-box {
+      margin: 0 auto 16px;
+    }
+    .submit {
+      width: 280px;
+      margin: 40px auto 0;
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+
+result section
+
+---------------------------------------------------------------------*/
+
+.result {
+  text-align: center;
+  .level1-heading {
+    margin-top: 70px;
+  }
+  .login-name {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .result-icon {
+    margin-bottom: 10px;
+  }
+  .result-message {
+    margin-bottom: 80px;
+  }
+  .result-btn {
+    text-align: center;
+  }
+}
+/*---------------------------------------------------------------------
+
+staff-select-error section
+
+---------------------------------------------------------------------*/
+
+.staff-select-error {
+  text-align: center;
+  .login-name {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+  .result-icon {
+    margin-bottom: 10px;
+  }
+  .result-message {
+    margin-bottom: 80px;
+  }
+  .result-btn {
+    text-align: center;
+  }
+}
+
+/*---------------------------------------------------------------------
+
+staff-list section
+
+---------------------------------------------------------------------*/
+
+.staff-list {
+  table {
+    margin-bottom: 20px;
+  }
+  .pagenation {
+    margin-bottom: 32px;
+  }
+}
+
+/*---------------------------------------------------------------------
+
+staff-disp section
+
+---------------------------------------------------------------------*/
+
+.staff-disp {
+  .login-name {
+    margin-bottom: 20px;
+  }
+  .staff-data-list {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  form {
+    text-align: center;
+  }
+}
+
+/*---------------------------------------------------------------------
+
+staff-edit section
+
+---------------------------------------------------------------------*/
+
+.staff-edit {
+  .staff-edit-form {
+    max-width: 600px;
+    margin: 0 auto;
+    .text-box {
+      margin-bottom: 30px;
+      width: auto;
+    }
+  }
+  .page-transition-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+
+staff-edit-check section
+
+---------------------------------------------------------------------*/
+
+.staff-edit-check {
+  .staff-data-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .page-transition-from-edit-check {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .alert-message {
+    text-align: center;
+    padding: 1em;
+  }
+  .page-transition-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+
+staff-add section
+
+---------------------------------------------------------------------*/
+
+.staff-add {
+  .staff-add-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    .text-box {
+      margin-bottom: 30px;
+      width: auto;
+    }
+  }
+  .page-transition-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .btn {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+
+order-download section
+
+---------------------------------------------------------------------*/
+
+.order-download {
+  .login-name {
+    margin-bottom: 30px;
+  }
+  .result-message {
+    margin-bottom: 20px;
+  }
+  .select-date {
+    font-size: 1.6rem;
+    .select-year {
+      margin-bottom: 16px;
+      >select {
+        margin-right: 10px;
+        padding: .5em 1em .5em .5em;
+      }
+    }
+    .select-month {
+      display: inline;
+      >select {
+        margin-right: 10px;
+        padding: .5em 1em .5em .5em;
+      }
+    }
+    .select-day {
+      display: inline;
+      >select {
+        margin-right: 10px;
+        padding: .5em 1em .5em .5em;
+      }
+    }
+  }
+  .l-to-download {
+    margin-top: 67px;
+    text-align: center;
+  }
+}
+
+/*---------------------------------------------------------------------
+
+order-download-done section
+
+---------------------------------------------------------------------*/
+
+.order-download-done {
+  .download-btns {
+    max-width: 350px;
+    margin: 0 auto;
+    .download-btn {
+      margin-bottom: 8px;
+      a {
+        width: 100%;
+      }
+    }
+    padding: 15px 0;
+    .bak-btns {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
