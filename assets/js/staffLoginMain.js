@@ -12,18 +12,13 @@ formLoginBtn.addEventListener('click', function() {
     alert('どっちかが空です');
     return;
   }
-  
-  // 文字列を整数に変換
-  parseInputLoginId = parseInt(inputLoginId, 10);
 
-  // コードが全角入力された際のバリデーション
-  if (isNaN(parseInputLoginId)) {
-    alert('コードは半角の数値でセットしてください');
-    return;
-  }
+  // 3桁にゼロ埋め
+  padInputCode = inputLoginId.padStart(3, "0");
+  console.log(padInputCode);
 
   // データが存在するかチェック
-  var docRef = db.collection("teachers").doc(inputLoginId);
+  var docRef = db.collection("teachers").doc(padInputCode);
   docRef.get().then(function(doc) {
       if (doc.exists) {
           console.log("Document data:", doc.data());

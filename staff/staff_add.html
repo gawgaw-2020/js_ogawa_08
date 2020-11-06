@@ -1,0 +1,50 @@
+<?php include(dirname(__FILE__).'/../assets/_inc/_head.html'); ?>
+<?php include(dirname(__FILE__).'/../assets/_inc/_header.html'); ?>
+
+
+<main class="main">
+  <div class="section-container">
+    <section class="staff-add">
+      <h1 class="level1-heading">講師新規登録</h1>
+      <p id="js-login-name" class="login-name login-name__border_bottom"></p>
+      <div class="staff-add-form">
+
+        <div class="text-box">
+          <label class="text-box__label" for="code">コード ※3桁の数字で入力してください</label>
+          <input id="js-input-code" class="text-box__input" type="text" name="code">
+        </div>
+
+        <div class="text-box">
+          <label class="text-box__label" for="name">講師名</label>
+          <input id="js-input-name" class="text-box__input" type="text" name="name">
+        </div>
+
+        <div class="text-box">
+          <label  class="text-box__label" for="pass">パスワード</label>
+          <input id="js-input-password" class="text-box__input" type="password" name="pass">
+        </div>
+
+        <div class="text-box">
+          <label  class="text-box__label" for="pass2">パスワードを再入力する</label>
+          <input id="js-input-password2" class="text-box__input" type="password" name="pass2">
+        </div>
+
+        <div class="page-transition-btns">
+          <input id="js-add-btn" class="btn btn--medium btn--green btn--link_green" type="button" value="登録する">
+          <input class="btn btn--small btn--transparent btn--link_transparent" type="button" onclick="history.back()" value="戻る">
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_common-script.html'); ?>
+
+
+<script src="/js_ogawa_08/assets/js/staffAddMain.js"></script>
+</body>
+</html>

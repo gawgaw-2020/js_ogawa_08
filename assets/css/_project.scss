@@ -29,11 +29,14 @@ login section
 
 .login {
   h1 {
-    margin-bottom: 56px;
+    margin-top: 12px;
+    margin-bottom: 48px;
     img {
+      border-radius: 50%;
+      overflow: hidden;  
       width: 50%;
       max-width: 280px;
-      margin: 24px auto 0;
+      margin: 48px auto 0;
     }
   }
   .login-form {
