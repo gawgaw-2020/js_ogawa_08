@@ -316,6 +316,23 @@ img {
   border-color: transparent;
 }
 
+.select-buttons__text {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.select-buttons__buttons {
+  max-width: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .card {
   border-radius: 4px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
@@ -615,6 +632,10 @@ staff-select-error section
 staff-list section
 
 ---------------------------------------------------------------------*/
+.staff-list .select-buttons {
+  margin-bottom: 20px;
+}
+
 .staff-list table {
   margin-bottom: 20px;
 }

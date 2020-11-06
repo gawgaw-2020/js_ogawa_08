@@ -209,6 +209,21 @@
 
 }
 
+// ボタン集合
+.select-buttons {
+  &__text {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  &__buttons {
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 // カード
 .card {
   border-radius: 4px;
