@@ -23,7 +23,7 @@ db.collection("teachers").get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
     const tr = document.createElement('tr');
     const d = doc.data();
-    tr.innerHTML = `<td class="staff-table__tbody-item1"><input id="${d.teacher_id}" type="radio" name="staffcode" value="${d.teacher_id}"></td>` + `<td class="staff-table__tbody-item2"><label for="${d.teacher_id}">${d.teacher_id}</label></td>` + `<td class="staff-table__tbody-item3"><label for="${d.teacher_id}">${d.teacher_name}</label></td>`;
+    tr.innerHTML = `<td class="staff-table__tbody-item1"><input id="teacher${d.teacher_id}" type="radio" name="staffcode" value="${d.teacher_id}"></td>` + `<td class="staff-table__tbody-item2"><label for=teacher"${d.teacher_id}">${d.teacher_id}</label></td>` + `<td class="staff-table__tbody-item3"><label for="teacher${d.teacher_id}">${d.teacher_name}</label></td>`;
     teacherList.appendChild(tr);
   });
 });
@@ -43,5 +43,23 @@ teacherEdit.addEventListener('click', () => {
 });
 // 削除ボタン押した処理
 teacherDelete.addEventListener('click', () => {
+  // 要素を取得
+var elements = document.getElementsByName( "staffcode" ) ;
 
+// 選択状態の値を取得
+for ( var selected_teacher_id = "", i = elements.length; i--; ) {
+	if ( elements[i].checked ) {
+		var selected_teacher_id = elements[i].value ;
+		break ;
+	}
+}
+
+if ( selected_teacher_id === "" ) {
+  // 何も選択されていなかった場合
+  window.location.href = '/js_ogawa_08/staff/staff_ng.html';
+} else {
+	// 選択状態の値が代入されている場合
+  localStorage.setItem('selected_teacher_id', selected_teacher_id);
+  window.location.href = '/js_ogawa_08/staff/staff_delete_check.html';
+}
 });

@@ -1,0 +1,35 @@
+<?php include(dirname(__FILE__).'/../assets/_inc/_head.html'); ?>
+<?php include(dirname(__FILE__).'/../assets/_inc/_header.html'); ?>
+
+
+<main class="main">
+  <div class="section-container">
+    <section class="staff-edit-check">
+      <h1 class="level1-heading">講師情報削除</h1>
+      <p id="js-login-name" class="login-name login-name__border_bottom"></p>
+      <dl class="staff-data-list">
+        <dt class="staff-data-list__title">講師コード</dt>
+        <dd id="js-selected_teacher_id" class="staff-data-list__data"></dd>
+        <dt class="staff-data-list__title">講師名</dt>
+        <dd id="js-selected_teacher_name" class="staff-data-list__data"></dd>
+      </dl>
+      <p class="alert-message">この講師を削除してよろしいですか？</p>
+      <div class="page-transition-btns">
+        <input id="js-delete-btn" class="btn btn--medium btn--red btn--link_red" type="submit" value="講師情報を削除する">
+        <input class="btn btn--small btn--transparent btn--link_transparent" type="button" onclick="history.back()" value="戻る">
+      </div>
+    </section>
+  </div>
+</main>
+
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_common-script.html'); ?>
+
+
+<script src="/js_ogawa_08/assets/js/staffDeleteCheckMain.js"></script>
+</body>
+</html>
