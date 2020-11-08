@@ -52,7 +52,7 @@ addBtn.addEventListener('click', () => {
         })
         .then(function(docRef) {
           localStorage.setItem('added_teacher_name', inputName);
-          window.location.href = '/js_ogawa_08/staff/staff_add_done.html';
+          window.location.href = '/js_ogawa_08/staff/staff_edit_done.html';
         })
         .catch(function(error) {
           console.error("Error adding document: ", error);

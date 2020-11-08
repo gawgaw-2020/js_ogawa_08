@@ -60,7 +60,26 @@ teacherDisp.addEventListener('click', () => {
 
 // 修正ボタン押した処理
 teacherEdit.addEventListener('click', () => {
+  // 要素を取得
+  var elements = document.getElementsByName( "staffcode" ) ;
 
+  // 選択状態の値を取得
+  for ( var selected_teacher_id = "", i = elements.length; i--; ) {
+    if ( elements[i].checked ) {
+      var selected_teacher_id = elements[i].value ;
+      break ;
+    }
+  }
+
+  if ( selected_teacher_id === "" ) {
+    // 何も選択されていなかった場合
+    window.location.href = '/js_ogawa_08/staff/staff_ng.html';
+  } else {
+    // 選択状態の値が代入されている場合
+    localStorage.setItem('selected_teacher_id', selected_teacher_id);
+    window.location.href = '/js_ogawa_08/staff/staff_edit.html';
+  }
+  
 });
 
 

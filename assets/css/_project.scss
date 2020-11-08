@@ -147,7 +147,6 @@ staff-edit section
     max-width: 600px;
     margin: 0 auto;
     .text-box {
-      margin-bottom: 30px;
       width: auto;
     }
   }
@@ -215,69 +214,3 @@ staff-add section
   }
 }
 
-/*---------------------------------------------------------------------
-
-order-download section
-
----------------------------------------------------------------------*/
-
-.order-download {
-  .login-name {
-    margin-bottom: 30px;
-  }
-  .result-message {
-    margin-bottom: 20px;
-  }
-  .select-date {
-    font-size: 1.6rem;
-    .select-year {
-      margin-bottom: 16px;
-      >select {
-        margin-right: 10px;
-        padding: .5em 1em .5em .5em;
-      }
-    }
-    .select-month {
-      display: inline;
-      >select {
-        margin-right: 10px;
-        padding: .5em 1em .5em .5em;
-      }
-    }
-    .select-day {
-      display: inline;
-      >select {
-        margin-right: 10px;
-        padding: .5em 1em .5em .5em;
-      }
-    }
-  }
-  .l-to-download {
-    margin-top: 67px;
-    text-align: center;
-  }
-}
-
-/*---------------------------------------------------------------------
-
-order-download-done section
-
----------------------------------------------------------------------*/
-
-.order-download-done {
-  .download-btns {
-    max-width: 350px;
-    margin: 0 auto;
-    .download-btn {
-      margin-bottom: 8px;
-      a {
-        width: 100%;
-      }
-    }
-    padding: 15px 0;
-    .bak-btns {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-}
