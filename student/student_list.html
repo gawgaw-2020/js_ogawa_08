@@ -1,0 +1,45 @@
+<?php include(dirname(__FILE__).'/../assets/_inc/_head.html'); ?>
+<?php include(dirname(__FILE__).'/../assets/_inc/_header.html'); ?>
+
+<main class="main">
+  <div class="section-container">
+    <section class="staff-list">
+      <h1 class="level1-heading">受講生一覧</h1>
+      <div class="login-name login-name-box">
+        <p id="js-login-name"></p>
+        <input id="js-student-add" class="btn btn--small btn--orange btn--link_orange" type="button" name="add" value="新規登録">
+      </div>
+      <div class="select-buttons">
+        <p class="select-buttons__text">選択された受講生を</p>
+        <div class="select-buttons__buttons">
+          <input id="js-student-disp" class="btn btn--exsmall btn--transparent btn--link_transparent" type="button" name="disp" value="参照">
+          <input id="js-student-edit" class="btn btn--exsmall btn--transparent btn--link_transparent" type="button" name="edit" value="修正">
+          <input id="js-student-delete" class="btn btn--exsmall btn--red btn--link_red" type="button" name="delete" value="削除">
+        </div>
+      </div>
+      <table class="staff-table">
+        <thead class="staff-table__thead">
+          <tr>
+            <th class="staff-table__thead-item1"></th>
+            <th class="staff-table__thead-item2">コード</th>
+            <th class="staff-table__thead-item3">名前</th>
+          </tr>
+        </thead>
+        <tbody id="js-student-list" class="staff-table__tbody">
+
+        </tbody>
+      </table>
+    </section>
+  </div>
+</main>
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_common-script.html'); ?>
+
+
+<script src="/js_ogawa_08/assets/js/studentListMain.js"></script>
+</body>
+</html>

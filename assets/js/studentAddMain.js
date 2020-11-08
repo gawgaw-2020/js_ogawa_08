@@ -23,6 +23,7 @@ addBtn.addEventListener('click', () => {
   const inputName = document.getElementById('js-input-name').value;
   const inputPassword = document.getElementById('js-input-password').value;
   const inputPassword2 = document.getElementById('js-input-password2').value;
+  const inputInfo = document.getElementById('js-input-info').value;
 
   // 空だった時のバリデーション
   if (!inputCode || !inputName || !inputPassword || !inputPassword2) {
@@ -39,20 +40,21 @@ addBtn.addEventListener('click', () => {
   }
 
   // コードが使われているかチェック
-  var docRef = db.collection("teachers").doc(padInputCode);
+  var docRef = db.collection("students").doc(padInputCode);
   docRef.get().then(function(doc) {
       if (doc.exists) {
         alert('そのコードはすでに使われています');
       } else {
         // 入力内容を登録
-        db.collection("teachers").doc(padInputCode).set({
-          teacher_id: padInputCode,
-          teacher_name: inputName,
-          password: inputPassword
+        db.collection("students").doc(padInputCode).set({
+          student_id: padInputCode,
+          student_name: inputName,
+          password: inputPassword,
+          student_info: inputInfo
         })
         .then(function(docRef) {
-          localStorage.setItem('added_teacher_name', inputName);
-          window.location.href = '/js_ogawa_08/staff/staff_add_done.html';
+          localStorage.setItem('added_student_name', inputName);
+          window.location.href = '/js_ogawa_08/student/student_add_done.html';
         })
         .catch(function(error) {
           console.error("Error adding document: ", error);
