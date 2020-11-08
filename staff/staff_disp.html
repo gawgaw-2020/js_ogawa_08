@@ -1,0 +1,33 @@
+<?php include(dirname(__FILE__).'/../assets/_inc/_head.html'); ?>
+<?php include(dirname(__FILE__).'/../assets/_inc/_header.html'); ?>
+
+
+<main class="main">
+  <div class="section-container">
+    <section class="staff-disp">
+      <h1 class="level1-heading">講師情報参照</h1>
+      <p id="js-login-name" class="login-name login-name__border_bottom"></p>
+      <dl class="staff-data-list">
+        <dt class="staff-data-list__title">講師コード</dt>
+        <dd id="js-selected_teacher_id" class="staff-data-list__data"></dd>
+        <dt class="staff-data-list__title">講師名</dt>
+        <dd id="js-selected_teacher_name" class="staff-data-list__data"></dd>
+      </dl>
+      <form>
+        <input class="btn btn--small btn--transparent btn--link_transparent" type="button" onclick="history.back()" value="戻る">
+      </form>
+    </section>
+  </div>
+</main>
+
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
+
+
+<?php include(dirname(__FILE__).'/../assets/_inc/_common-script.html'); ?>
+
+
+<script src="/js_ogawa_08/assets/js/staffDispMain.js"></script>
+</body>
+</html>
