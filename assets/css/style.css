@@ -971,4 +971,10 @@ staff-add section
 .staff-add .page-transition-btns .btn {
   margin-bottom: 16px;
 }
+
+.credit {
+  text-align: center;
+  padding: 60px 0;
+  color: #f7f7f7;
+}
 /*# sourceMappingURL=style.css.map */
