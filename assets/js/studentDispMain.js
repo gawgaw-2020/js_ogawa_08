@@ -80,21 +80,37 @@ function getTime() {
     const time = new Date();
     const progressDateTime = (time.getMonth() + 1) + "/" + time.getDate() + '(' + youbi[time.getDay()] + ')';
     return progressDateTime;
-
 }
+
+// 削除処理
+function deleteprogress(self) {
+    const result = confirm('この進捗メッセージを削除しますか？');
+    if (result) {
+        const progressID = self.getAttribute('data-id');
+        progressCollection.doc(progressID).delete().then(function() {
+        console.log("Document successfully deleted!");
+        window.location.href = '/js_ogawa_08/student/student_disp.html';
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+    }
+};
+
 
 // 変更があったら'created'でソートして画面に表示
 progressCollection.orderBy('created').onSnapshot(snapshot => {
 
     snapshot.docChanges().forEach(change => {
         if (change.type === 'added') {
-        const li = document.createElement('li');
-        li.classList.add('progress-list__item');
-        const d = change.doc.data();
-        li.innerHTML = `<p class="progress-list__date">${d.progressDateTime}</p>
-        <p class="progress-list__comment">${d.progress}</p>
-        <p class="progress-list__written-by">${d.written_by}</p>`;
-        progressList.insertBefore(li, progressList.children[0]);
+            const li = document.createElement('li');
+            li.setAttribute('data-id', change.doc.id);
+            li.setAttribute('ondblclick', 'deleteprogress(this)');
+            li.classList.add('progress-list__item');
+            const d = change.doc.data();
+            li.innerHTML = `<p class="progress-list__date">${d.progressDateTime}</p>
+            <p class="progress-list__comment">${d.progress}</p>
+            <p class="progress-list__written-by">${d.written_by}</p>`;
+            progressList.insertBefore(li, progressList.children[0]);
         }
     });
 });
