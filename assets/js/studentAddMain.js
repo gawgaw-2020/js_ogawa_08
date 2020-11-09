@@ -21,12 +21,15 @@ addBtn.addEventListener('click', () => {
   // 入力内容取得
   const inputCode = document.getElementById('js-input-code').value;
   const inputName = document.getElementById('js-input-name').value;
+  const inputCourse = document.getElementById('js-input-course').value;
   const inputPassword = document.getElementById('js-input-password').value;
   const inputPassword2 = document.getElementById('js-input-password2').value;
   const inputInfo = document.getElementById('js-input-info').value;
+  const inputFuture = document.getElementById('js-input-future').value;
 
+  console.log(inputFuture);
   // 空だった時のバリデーション
-  if (!inputCode || !inputName || !inputPassword || !inputPassword2) {
+  if (!inputCode || !inputName || !inputPassword || !inputPassword2 || !inputFuture) {
     alert('どっちかが空です');
     return;
   }
@@ -50,7 +53,9 @@ addBtn.addEventListener('click', () => {
           student_id: padInputCode,
           student_name: inputName,
           password: inputPassword,
-          student_info: inputInfo
+          student_course: inputCourse,
+          student_info: inputInfo,
+          student_future: inputFuture
         })
         .then(function(docRef) {
           localStorage.setItem('added_student_name', inputName);

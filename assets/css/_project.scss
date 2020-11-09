@@ -126,6 +126,9 @@ staff-disp section
   .login-name {
     margin-bottom: 20px;
   }
+  #js-toggle-list {
+    margin-bottom: 30px;
+  }
   .staff-data-list {
     max-width: 600px;
     margin: 0 auto;
@@ -202,6 +205,9 @@ staff-add section
     .text-box {
       margin-bottom: 30px;
       width: auto;
+    }
+    .selectbox-box {
+      margin-bottom: 30px;
     }
   }
   .page-transition-btns {

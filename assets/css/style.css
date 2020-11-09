@@ -485,6 +485,84 @@ img {
   text-align: left;
 }
 
+.student-table {
+  font-size: 1.6rem;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.student-table__thead {
+  background-color: #eceeef;
+  height: 40px;
+}
+
+.student-table__thead-item1, .student-table__thead-item2, .student-table__thead-item3, .student-table__thead-item4, .student-table__thead-item5 {
+  font-weight: normal;
+  padding: 0.5em 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.student-table__thead-item1 {
+  width: 3%;
+}
+
+.student-table__thead-item2 {
+  width: 5%;
+}
+
+.student-table__thead-item3 {
+  width: 8%;
+}
+
+.student-table__thead-item4 {
+  width: 15%;
+}
+
+.student-table__thead-item5 {
+  width: 15%;
+}
+
+.student-table__tbody {
+  font-size: 1.4rem;
+}
+
+.student-table__tbody > tr {
+  border-bottom: 1px solid #ddd;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.student-table__tbody > tr:hover {
+  background-color: rgba(255, 192, 203, 0.3);
+}
+
+.student-table__tbody-item1, .student-table__tbody-item2, .student-table__tbody-item3, .student-table__tbody-item4, .student-table__tbody-item5 {
+  padding: 0.5em 0;
+  position: relative;
+  text-align: center;
+}
+
+.student-table__tbody-item1 label, .student-table__tbody-item2 label, .student-table__tbody-item3 label, .student-table__tbody-item4 label, .student-table__tbody-item5 label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
 .gnavi {
   height: 40px;
   padding: 0 16px;
@@ -683,6 +761,10 @@ staff-disp section
   margin-bottom: 20px;
 }
 
+.staff-disp #js-toggle-list {
+  margin-bottom: 30px;
+}
+
 .staff-disp .staff-data-list {
   max-width: 600px;
   margin: 0 auto;
@@ -774,6 +856,10 @@ staff-add section
 .staff-add .staff-add-form .text-box {
   margin-bottom: 30px;
   width: auto;
+}
+
+.staff-add .staff-add-form .selectbox-box {
+  margin-bottom: 30px;
 }
 
 .staff-add .page-transition-btns {

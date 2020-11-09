@@ -1,12 +1,14 @@
 // ストレージにデータがなければログイン画面へ遷移
 if (storage.teacher_id === undefined || storage.teacher_name === undefined) {
-  window.location.href = '/js_ogawa_08/staff-login/staff_login.html';
+    window.location.href = '/js_ogawa_08/staff-login/staff_login.html';
 }
 
 // ------------------要素の取得------------------
 const teacher_id = localStorage.getItem('teacher_id');
 const teacher_name = localStorage.getItem('teacher_name');
+
 const selected_teacher_id = localStorage.getItem('selected_teacher_id');
+
 const loginName = document.getElementById('js-login-name');
 
 const  selectedTeacherId = document.getElementById('js-selected_teacher_id');

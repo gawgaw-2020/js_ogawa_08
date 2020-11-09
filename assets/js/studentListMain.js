@@ -22,7 +22,28 @@ db.collection("students").get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
     const tr = document.createElement('tr');
     const d = doc.data();
-    tr.innerHTML = `<td class="staff-table__tbody-item1"><input id="student${d.student_id}" type="radio" name="studentcode" value="${d.student_id}"></td>` + `<td class="staff-table__tbody-item2"><label for=student"${d.student_id}">${d.student_id}</label></td>` + `<td class="staff-table__tbody-item3"><label for="student${d.student_id}">${d.student_name}</label></td>`;
+    if (!d.student_course) {
+      d.student_course = '';
+    }
+    if (!d.student_future) {
+      d.student_future = '';
+    }
+    tr.innerHTML = 
+      `<td class="student-table__tbody-item1">` + 
+        `<input id="student${d.student_id}" type="radio" name="studentcode" value="${d.student_id}">` + 
+      `</td>` + 
+      `<td class="student-table__tbody-item2">` + 
+        `<label for="student${d.student_id}">${d.student_id}</label>`+ 
+      `</td>` + 
+      `<td class="student-table__tbody-item3">` + 
+        `<label for="student${d.student_id}">${d.student_name}</label>` + 
+      `</td>` + 
+      `<td class="student-table__tbody-item4">` + 
+        `<label for="student${d.student_id}">${d.student_course}</label>` + 
+      `</td>` +
+      `<td class="student-table__tbody-item5">` + 
+        `<label for="student${d.student_id}">${d.student_future}</label>` + 
+      `</td>`;
     studentList.appendChild(tr);
   });
 });
@@ -101,7 +122,7 @@ if ( selected_student_id === "" ) {
   window.location.href = '/js_ogawa_08/student/student_ng.html';
 } else {
 	// 選択状態の値が代入されている場合
-  localStorage.setItem('selected_student_id', selected_teacher_id);
+  localStorage.setItem('selected_student_id', selected_student_id);
   window.location.href = '/js_ogawa_08/student/student_delete_check.html';
 }
 });

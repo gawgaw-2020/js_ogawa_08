@@ -33,7 +33,7 @@ formLoginBtn.addEventListener('click', function() {
           }
       } else {
           // doc.data() will be undefined in this case
-          alert('スタッフコードが登録されていません');
+          alert('講師コードが登録されていません');
           console.log("No such document!");
       }
   }).catch(function(error) {

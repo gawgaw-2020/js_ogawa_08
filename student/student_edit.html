@@ -4,19 +4,19 @@
 
 <main class="main">
   <div class="section-container">
-    <section class="staff-add">
-      <h1 class="level1-heading">受講生新規登録</h1>
+    <section class="staff-edit">
+      <h1 class="level1-heading">受講生情報修正</h1>
       <p id="js-login-name" class="login-name login-name__border_bottom"></p>
-      <div class="staff-add-form">
+      <div class="staff-edit-form">
 
-        <div class="text-box">
-          <label class="text-box__label" for="code">コード ※3桁の数字で入力してください</label>
-          <input id="js-input-code" class="text-box__input" type="text" name="code" autocomplete="off">
-        </div>
-
+        <dl class="staff-data-list">
+          <dt class="staff-data-list__title">受講生コード</dt>
+          <dd id="js-selected_student_id" class="staff-data-list__data"></dd>
+        </dl>
+  
         <div class="text-box">
           <label class="text-box__label" for="name">受講生 お名前</label>
-          <input id="js-input-name" class="text-box__input" type="text" name="name" autocomplete="off">
+          <input id="js-input-name" class="text-box__input" type="text" name="name" autocomplete="off" value="">
         </div>
 
         <div class="text-box">
@@ -25,16 +25,16 @@
         </div>
 
         <div class="text-box">
-          <label  class="text-box__label" for="pass">パスワード</label>
+          <label  class="text-box__label" for="pass">新しいパスワード</label>
           <input id="js-input-password" class="text-box__input" type="password" name="pass">
         </div>
 
         <div class="text-box">
-          <label  class="text-box__label" for="pass2">パスワードを再入力する</label>
+          <label  class="text-box__label" for="pass2">新しいパスワードを再入力する</label>
           <input id="js-input-password2" class="text-box__input" type="password" name="pass2">
         </div>
 
-        <div class="selectbox-box">
+        <div class="selectbox-box" style="margin-bottom: 30px;">
           <label class="selectbox-box__label" for="info">卒業後の進路希望</label>
           <select name="future" id="js-input-future">
             <option value="未選択">卒業後の希望進路を選択してください</option>
@@ -46,12 +46,12 @@
         </div>
 
         <div class="textarea-box">
-          <label class="textarea-box__label" for="info">受講前情報</label>
+          <label  class="textarea-box__label" for="info">受講前情報</label>
           <textarea name="info" id="js-input-info" class="textarea-box__textarea" cols="30" rows="5"></textarea>
         </div>
 
         <div class="page-transition-btns">
-          <input id="js-add-btn" class="btn btn--medium btn--green btn--link_green" type="button" value="登録する">
+          <input id="js-edit-btn" class="btn btn--medium btn--green btn--link_green" type="button" value="修正する">
           <input class="btn btn--small btn--transparent btn--link_transparent" type="button" onclick="history.back()" value="戻る">
         </div>
       </div>
@@ -60,12 +60,12 @@
 </main>
 
 
-<?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
 
+<?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
 
 <?php include(dirname(__FILE__).'/../assets/_inc/_common-script.html'); ?>
 
 
-<script src="/js_ogawa_08/assets/js/studentAddMain.js"></script>
+<script src="/js_ogawa_08/assets/js/studentEditMain.js"></script>
 </body>
 </html>
