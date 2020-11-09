@@ -1,0 +1,42 @@
+<?php include(dirname(__FILE__).'/../assets/_inc/_head.html'); ?>
+
+
+<main class="main">
+  <div class="section-container">
+    <section class="login">
+      <h1><img src="/js_ogawa_08/assets/image/30605.jpg" alt="進捗管理システム"></h1>
+      <div class="login-form">
+
+        <div class="text-box">
+          <label class="text-box__label" for="code">受講生コード</label>
+          <input id='js-input-login-id' class="text-box__input" type="text" name="code" autocomplete="off">
+        </div>
+
+        <div class="text-box">
+          <label  class="text-box__label" for="pass">パスワード</label>
+          <input id='js-input-login-password' class="text-box__input" type="password" name="pass">
+        </div>
+
+        <div class="submit">
+          <input id='js-login-btn' class="btn btn--large btn--orange btn--link_orange" type="button" value="ログイン">
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+  <?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
+  <div class="credit">
+    <a href='https://www.freepik.com/vectors/school'>School vector created by freepik - www.freepik.com</a>
+    <br>
+    <a href='https://www.freepik.com/vectors/people'>People vector created by pikisuperstar - www.freepik.com</a>
+  </div>
+
+
+  <?php include(dirname(__FILE__).'/../assets/_inc/_common-script.html'); ?>
+
+
+  <script src="/js_ogawa_08/assets/js/avatarLoginMain.js"></script>
+  </body>
+  </html>
