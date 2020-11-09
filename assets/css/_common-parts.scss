@@ -450,3 +450,65 @@
   }
 
 }
+
+#js-student-progress-list {
+  form {
+    text-align: left;
+    height: 120px;
+    margin-bottom: 30px;
+    textarea {
+      padding: 0.5em 1em;
+      width: 75%;
+      height: 120px;
+    }
+    button {
+      width: 20%;
+      max-width: 120px;
+      height: 120px;
+      vertical-align: top;
+    }
+  }
+}
+
+// 進捗リスト
+#js-student-progress-list .progress-list {
+  margin-bottom: 30px;
+  &__item {
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    &:hover .progress-list__comment {
+      transition: 1s;
+      max-height: 200px;
+    } 
+  }
+  &__date {
+    font-size: 1.2rem;
+    max-width: 100px;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px dotted #ddd;
+  }
+  &__comment {
+    transition: all 0.1s;
+    min-height: 88px;
+    max-height: 88px;
+    width: 85%;
+    overflow: hidden;
+    padding: 0.5em 1em;
+    border-right: 1px dotted #ddd;
+  }
+  &__written-by {
+    font-size: 1.2rem;
+    width: 10%;
+    max-width: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

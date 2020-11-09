@@ -7,7 +7,7 @@
     <section class="staff-disp">
       <h1 class="level1-heading">受講生情報参照</h1>
       <p id="js-login-name" class="login-name login-name__border_bottom"></p>
-      <p><span id="js-selected_student_name"></span>さん</p>
+      <p class="selected_student_name"><span id="js-selected_student_name01"></span>さん</p>
       <p id="js-toggle-list" class="btn btn--large btn--orange btn--link_orange">受講生の詳細情報を表示</p>
 
 
@@ -15,7 +15,7 @@
         <dt class="staff-data-list__title">受講生コード</dt>
         <dd id="js-selected_student_id" class="staff-data-list__data"></dd>
         <dt class="staff-data-list__title">受講生 お名前</dt>
-        <dd id="js-selected_student_name" class="staff-data-list__data"></dd>
+        <dd id="js-selected_student_name02" class="staff-data-list__data"></dd>
         <dt class="staff-data-list__title">選択コース</dt>
         <dd id="js-selected_student_course" class="staff-data-list__data"></dd>
         <dt class="staff-data-list__title">卒業後の希望進路</dt>
@@ -27,9 +27,9 @@
       <div id="js-student-progress-list">
         <form>
           <textarea name="progress" id="progress" cols="30" rows="5" placeholder="進捗を入力"></textarea>
-          <button type="submit">進捗を登録する</button>
+          <button type="submit">進捗を<br>登録する</button>
         </form>
-        <ul id="progress-list">
+        <ul id="progress-list" class="progress-list">
         </ul>  
       </div>
 

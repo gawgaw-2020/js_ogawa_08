@@ -11,7 +11,8 @@ const selected_student_id = localStorage.getItem('selected_student_id');
 const loginName = document.getElementById('js-login-name');
 
 const  selectedstudentId = document.getElementById('js-selected_student_id');
-const  selectedstudentName = document.getElementById('js-selected_student_name');
+const  selectedstudentName01 = document.getElementById('js-selected_student_name01');
+const  selectedstudentName02 = document.getElementById('js-selected_student_name02');
 const  selectedstudentCourse = document.getElementById('js-selected_student_course');
 const  selectedstudentFuture = document.getElementById('js-selected_student_future');
 const  selectedstudentInfo = document.getElementById('js-selected_student_info');
@@ -34,7 +35,8 @@ var docRef = db.collection("students").doc(selected_student_id);
 docRef.get().then(function(doc) {
     if (doc.exists) {
         console.log("Document data:", doc.data());
-        selectedstudentName.textContent = doc.data().student_name;
+        selectedstudentName01.textContent = doc.data().student_name;
+        selectedstudentName02.textContent = doc.data().student_name;
         selectedstudentCourse.textContent = doc.data().student_course;
         selectedstudentFuture.textContent = doc.data().student_future;
         selectedstudentInfo.innerHTML = nl2br(doc.data().student_info)
@@ -72,10 +74,13 @@ const progressList = document.getElementById('progress-list');
 const progressCollection = db.collection('students/' + selected_student_id + '/progress');
 
 // 現在日時の取得
+// 今回は日付 例）9/17
 function getTime() {
+    const youbi = ["日","月","火","水","木","金","土"];
     const time = new Date();
-    const messageDateTime = time.getHours() + ":" + String(time.getMinutes()).padStart(2, "0");
-    return messageDateTime;
+    const progressDateTime = (time.getMonth() + 1) + "/" + time.getDate() + '(' + youbi[time.getDay()] + ')';
+    return progressDateTime;
+
 }
 
 // 変更があったら'created'でソートして画面に表示
@@ -84,8 +89,11 @@ progressCollection.orderBy('created').onSnapshot(snapshot => {
     snapshot.docChanges().forEach(change => {
         if (change.type === 'added') {
         const li = document.createElement('li');
+        li.classList.add('progress-list__item');
         const d = change.doc.data();
-        li.innerHTML = d.progress + ':' + d.written_by;
+        li.innerHTML = `<p class="progress-list__date">${d.progressDateTime}</p>
+        <p class="progress-list__comment">${d.progress}</p>
+        <p class="progress-list__written-by">${d.written_by}</p>`;
         progressList.insertBefore(li, progressList.children[0]);
         }
     });

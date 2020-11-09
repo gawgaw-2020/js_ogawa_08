@@ -563,6 +563,90 @@ img {
   overflow: hidden;
 }
 
+#js-student-progress-list form {
+  text-align: left;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+#js-student-progress-list form textarea {
+  padding: 0.5em 1em;
+  width: 75%;
+  height: 120px;
+}
+
+#js-student-progress-list form button {
+  width: 20%;
+  max-width: 120px;
+  height: 120px;
+  vertical-align: top;
+}
+
+#js-student-progress-list .progress-list {
+  margin-bottom: 30px;
+}
+
+#js-student-progress-list .progress-list__item {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+}
+
+#js-student-progress-list .progress-list__item:hover .progress-list__comment {
+  -webkit-transition: 1s;
+  transition: 1s;
+  max-height: 200px;
+}
+
+#js-student-progress-list .progress-list__date {
+  font-size: 1.2rem;
+  max-width: 100px;
+  width: 15%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px dotted #ddd;
+}
+
+#js-student-progress-list .progress-list__comment {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  min-height: 88px;
+  max-height: 88px;
+  width: 85%;
+  overflow: hidden;
+  padding: 0.5em 1em;
+  border-right: 1px dotted #ddd;
+}
+
+#js-student-progress-list .progress-list__written-by {
+  font-size: 1.2rem;
+  width: 10%;
+  max-width: 120px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .gnavi {
   height: 40px;
   padding: 0 16px;
@@ -761,6 +845,14 @@ staff-disp section
   margin-bottom: 20px;
 }
 
+.staff-disp #js-selected_student_name {
+  margin-bottom: 30px;
+}
+
+.staff-disp .selected_student_name {
+  margin-bottom: 16px;
+}
+
 .staff-disp #js-toggle-list {
   margin-bottom: 30px;
 }
@@ -773,6 +865,7 @@ staff-disp section
 
 .staff-disp form {
   text-align: center;
+  margin-bottom: 80px;
 }
 
 /*---------------------------------------------------------------------
