@@ -977,4 +977,20 @@ staff-add section
   padding: 60px 0;
   color: #f7f7f7;
 }
+
+#avatar_screen .field {
+  position: relative;
+}
+
+#avatar_screen .field .avatar {
+  border: 2px solid blue;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: pink;
+}
+
+#avatar_screen .field .avatar__image {
+  width: 100px;
+}
 /*# sourceMappingURL=style.css.map */

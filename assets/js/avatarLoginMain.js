@@ -2,6 +2,15 @@
 // ------------------要素の取得------------------
 const formLoginBtn = document.getElementById('js-login-btn');
 // --------------要素の取得ここまで--------------
+
+
+const avatarCollection = db.collection('avatars');
+
+function randomNumber(start, end) {
+  return Math.floor(Math.random()*(end-start+1)+start);
+}
+
+
 formLoginBtn.addEventListener('click', function() {
   // inputタグのところにユーザが入力した値を取得
   const inputLoginId = document.getElementById('js-input-login-id').value;
@@ -27,7 +36,24 @@ formLoginBtn.addEventListener('click', function() {
             console.log('ログイン成功');
             localStorage.setItem('student_id', doc.data().student_id);
             localStorage.setItem('student_name', doc.data().student_name);
-            window.location.href = '/js_ogawa_08/avatar/avatar_top.html';
+
+            // アバターデータの作成
+            avatarCollection.add({
+              avatar_id: doc.data().student_id,
+              avatar_name: doc.data().student_name,
+              pointX: randomNumber(0, 500),
+              pointY: randomNumber(0, 500),
+              status: 0
+            })
+            .then(doc => {
+              console.log(`avatar added!`);
+              alert();
+              window.location.href = '/js_ogawa_08/avatar/avatar_top.html';
+            })
+            .catch(error => {
+              console.log('avatar add error!');
+              console.log(error);
+            });
           } else {
             alert('パスワードが違います');
           }
