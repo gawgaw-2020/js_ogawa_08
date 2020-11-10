@@ -992,8 +992,6 @@ staff-add section
 }
 
 #avatar_screen .field .avatar {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   border: 10px solid #03A6EA;
   position: absolute;
   width: 60px;

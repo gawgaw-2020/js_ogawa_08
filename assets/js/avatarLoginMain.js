@@ -42,12 +42,16 @@ formLoginBtn.addEventListener('click', function() {
             const clickX = randomNumber(0, 500);
           
             localStorage.setItem('clientY', clickY);
-            localStorage.setItem('clientX', clickX);          
+            localStorage.setItem('clientX', clickX);
+            localStorage.setItem('beforePointX', clickX);
+            localStorage.setItem('beforePointY', clickY);
 
             // アバターデータの作成
             avatarCollection.doc(padInputCode).set({
               avatar_id: doc.data().student_id,
               avatar_name: doc.data().student_name,
+              beforePointX: clickX,
+              beforePointY: clickY,
               pointX: clickX,
               pointY: clickY,
               status: 0
