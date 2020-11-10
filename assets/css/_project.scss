@@ -236,17 +236,60 @@ staff-add section
 
 #avatar_screen {
   .field {
+    background-color: lightcyan;
+    width: 768px;
+    height: 500px;
+    white-space:nowrap;
+    user-select: none;
     position: relative;
+    overflow: hidden;
     .avatar {
-      border: 2px solid blue;
+      transform: translate(-50%, -50%);
+      border: 10px solid #03A6EA;
       position: absolute;
-      width: 200px;
-      height: 100px;
-      background-color: pink;
-      &__image {
-          width: 100px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      &.working {
+        border: 10px solid green;
       }
-      
+      &.ok {
+        border: 10px solid gold;
+      }
+      &.another {
+        border: 10px solid purple;
+      }
+      &.help {
+        border: 10px solid red;
+      }
+      &__name {
+        font-size: 1rem;
+        position: absolute;
+        top: -15px;
+        left: 0;
+      }
+      &__image {
+        img {
+          border-radius: 50%;
+        }
+      }
     }
   }
 }
+
+// コメントのCSS
+.nnc-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.nnc-comment {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.nnc-comment-custom {
+  font-weight: bold;
+}
+
+

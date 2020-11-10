@@ -1,12 +1,86 @@
-<?php include(dirname(__FILE__).'/../assets/_inc/_head.html'); ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>受講生進捗管理システム</title>
+  <link rel="icon" href="#">
+  <!-- OGP Tag data-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@gawgaw_2020">
+  <meta name="twitter:title" content="受講生進捗管理システム">
+  <meta name="twitter:description" content="受講生進捗管理システム">
+  <meta name="twitter:image" content="#">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="/js_ogawa_08/assets/css/style.css">
+  <!-- fontawesome -->
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="nncomment.js"></script>
+  <script>
+    $(function() {
+
+      db.collection("comments").onSnapshot(snapshot => {
+        snapshot.docChanges().forEach(change => {
+          
+          // 追加されたら画面に表示
+          if (change.type === 'added') {
+
+            const d = change.doc.data();
+            $('#field').comment(d.message);
+
+          }
+        });
+      });
+
+
+      // コメント送信時の処理
+      $('#comment').on('submit', function() {
+        var message = $('#message').val();
+        $('#message').val('');
+
+        db.collection("comments").add({
+          message: message,
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+
+        return false;
+      });
+    });
+
+
+  </script>
+</head>
 
 <main id="avatar_screen">
-  <div id="field" class="field">
-
+  
+  <div id="field" class="field nnc-screen">
     
   </div>
+  <div class="control-panel">
+    <p class="control-panel__heading">コントロールパネル</p>
+    <div class="control-panel__status">
+      <p>ステータス変更</p>
+        <button id="working_btn">取り組み中...</button>
+        <button id="ok_btn">理解した</button>
+        <button id="another_btn">自習中</button>
+        <button id="help_btn">ヘルプ!!</button>
+      </div>
+    </div>
+  <form id="comment" action="#">
+    <div class="control-panel__comment">
+      <p>コメント</p>
+      <input id="message" />
+    </div>
+  </form>
 </main>
-<a class="card__link" href="/js_ogawa_08/avatar/avatar_logout.html">ログアウト</a>
+<div id="logout" class="card__link" href="/js_ogawa_08/avatar/avatar_logout.html">ログアウト</div>
 
 
 <?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>

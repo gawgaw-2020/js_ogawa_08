@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="nncomment.js"></script>
+    <link rel="stylesheet" type="text/css" href="nncomment.css" />
+    <script>
+      $(function() {
+        $('#comment').on('submit', function() {
+          var message = $('#message').val();
+          $('#message').val('');
+
+          // 表示したい要素に対してコメント
+          $('#screen').comment(message);
+
+          return false;
+        });
+      });
+    </script>
+    <style>
+      .nnc-comment-custom {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    </div>
+  </body>
+</html>
+

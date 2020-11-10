@@ -979,18 +979,66 @@ staff-add section
 }
 
 #avatar_screen .field {
+  background-color: lightcyan;
+  width: 768px;
+  height: 500px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
+  overflow: hidden;
 }
 
 #avatar_screen .field .avatar {
-  border: 2px solid blue;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 10px solid #03A6EA;
   position: absolute;
-  width: 200px;
-  height: 100px;
-  background-color: pink;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
-#avatar_screen .field .avatar__image {
-  width: 100px;
+#avatar_screen .field .avatar.working {
+  border: 10px solid green;
+}
+
+#avatar_screen .field .avatar.ok {
+  border: 10px solid gold;
+}
+
+#avatar_screen .field .avatar.another {
+  border: 10px solid purple;
+}
+
+#avatar_screen .field .avatar.help {
+  border: 10px solid red;
+}
+
+#avatar_screen .field .avatar__name {
+  font-size: 1rem;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+#avatar_screen .field .avatar__image img {
+  border-radius: 50%;
+}
+
+.nnc-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.nnc-comment {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.nnc-comment-custom {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

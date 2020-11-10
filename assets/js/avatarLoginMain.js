@@ -1,5 +1,6 @@
 
 // ------------------要素の取得------------------
+
 const formLoginBtn = document.getElementById('js-login-btn');
 // --------------要素の取得ここまで--------------
 
@@ -37,12 +38,18 @@ formLoginBtn.addEventListener('click', function() {
             localStorage.setItem('student_id', doc.data().student_id);
             localStorage.setItem('student_name', doc.data().student_name);
 
+            const clickY = randomNumber(0, 500);
+            const clickX = randomNumber(0, 500);
+          
+            localStorage.setItem('clientY', clickY);
+            localStorage.setItem('clientX', clickX);          
+
             // アバターデータの作成
-            avatarCollection.add({
+            avatarCollection.doc(padInputCode).set({
               avatar_id: doc.data().student_id,
               avatar_name: doc.data().student_name,
-              pointX: randomNumber(0, 500),
-              pointY: randomNumber(0, 500),
+              pointX: clickX,
+              pointY: clickY,
               status: 0
             })
             .then(doc => {
