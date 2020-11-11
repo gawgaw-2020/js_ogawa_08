@@ -38,8 +38,53 @@
 
       // コメント送信時の処理
       $('#comment').on('submit', function() {
+        // 空文字だったら処理を止める
+        
         var message = $('#message').val();
         $('#message').val('');
+
+        
+        if (message.includes('デモ') || message.includes('でも')) {
+          const letsCode = [
+            'アイコンwwwww',
+            'アイコンはランダム',
+            'このコメントはガヤに最適!!!!',
+            'あああああああああああああああ',
+            'aaaaaaaa',
+            '888888888',
+            '888',
+            'www',
+            'ベジータ',
+            '人を怒らせる方法',
+            '眠たい!!',
+            '😆',
+            'っつっつっつっつwwww',
+            '💣',
+            'すご✨',
+            '😎',
+            '眠たい!!',
+            'おおおおお',
+            'コメントが流れてる~~~',
+            'どこかでみたことある!!'
+          ];
+          
+          for (let i = 0; i < letsCode.length; i++) {
+            setTimeout(() => {
+              db.collection("comments").add({
+                message: letsCode[i]
+              })
+              .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+              })
+              .catch(function(error) {
+                console.error("Error adding document: ", error);
+              });
+              
+            }, Math.floor(Math.random() * (60000 - 500 + 1) + 500));
+          }
+        }
+        
+
 
         db.collection("comments").add({
           message: message,
@@ -58,7 +103,7 @@
 
   </script>
 </head>
-
+<body style="overflow: hidden;">
 <main id="avatar_screen">
   
   <div id="field" class="field nnc-screen">

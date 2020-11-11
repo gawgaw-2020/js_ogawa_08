@@ -84,16 +84,16 @@ avatarCollection.onSnapshot(snapshot => {
       div.classList.add('avatar');
 
       if (d.status === 1) {
-        div.classList.add('working');
+        div.classList.add('working', 'animate__animated', 'animate__rubberBand');
       }
       if (d.status === 2) {
         div.classList.add('ok', 'animate__animated', 'animate__flipInY');
       }
       if (d.status === 3) {
-        div.classList.add('another');
+        div.classList.add('another', 'animate__animated', 'animate__rubberBand');
       }
       if (d.status === 4) {
-        div.classList.add('help', 'animate__animated', 'animate__shakeY');
+        div.classList.add('help', 'animate__animated', 'animate__shakeY', 'animate__infinite');
       }
 
       div.innerHTML = `<p class="avatar__image"><img src="/js_ogawa_08/assets/image/icon/member${d.avatar_id}.svg" alt=""></p>
@@ -310,14 +310,14 @@ window.addEventListener('popstate', (e) => {
 });
 
 // リロード時の処理
-if (window.performance) {
-  if (performance.navigation.type === 1) {
-    db.collection("avatars").doc(student_id).delete().then(function() {
-      console.log("Document successfully deleted!");
-      localStorage.clear();
-      window.location.href = '/js_ogawa_08/avatar/avatar_login.html';
-    }).catch(function(error) {
-        console.error("Error removing document: ", error);
-    });
-  }
-}
+// if (window.performance) {
+//   if (performance.navigation.type === 1) {
+//     db.collection("avatars").doc(student_id).delete().then(function() {
+//       console.log("Document successfully deleted!");
+//       localStorage.clear();
+//       window.location.href = '/js_ogawa_08/avatar/avatar_login.html';
+//     }).catch(function(error) {
+//         console.error("Error removing document: ", error);
+//     });
+//   }
+// }
