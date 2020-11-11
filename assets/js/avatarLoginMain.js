@@ -77,3 +77,38 @@ formLoginBtn.addEventListener('click', function() {
       console.log("Error getting document:", error);
   });
 });
+
+    // 画像のプレリロード
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member100.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member101.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member102.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member103.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member104.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member105.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member106.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member107.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member108.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member109.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member110.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member111.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member112.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member113.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member114.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member115.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member116.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member117.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member118.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member119.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member120.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member121.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member122.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member123.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member124.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member125.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member126.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member127.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member128.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member129.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member130.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member131.svg" );
+    $("<img>").attr("src", "/js_ogawa_08/assets/image/icon/member132.svg" );

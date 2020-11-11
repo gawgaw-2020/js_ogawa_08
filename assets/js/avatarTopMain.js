@@ -40,10 +40,22 @@ avatarCollection.onSnapshot(snapshot => {
       const div = document.createElement('div');
       const d = change.doc.data();
       div.setAttribute('id', change.doc.id);
-      div.style.left = d.pointX + 'px';
-      div.style.top = d.pointY + 'px';
-      div.classList.add('avatar');
-      div.innerHTML = `<p class="avatar__image"><img src="/js_ogawa_08/assets/image/member${d.avatar_id}.png" alt=""></p>
+      div.style.left = (d.pointX - 30) + 'px';
+      div.style.top = (d.pointY - 30) + 'px';
+      div.classList.add('avatar', 'animate__rollIn','animate__animated');
+      if (d.status === 1) {
+        div.classList.add('working');
+      }
+      if (d.status === 2) {
+        div.classList.add('ok', 'animate__animated', 'animate__flipInY');
+      }
+      if (d.status === 3) {
+        div.classList.add('another');
+      }
+      if (d.status === 4) {
+        div.classList.add('help', 'animate__animated', 'animate__shakeY');
+      }
+      div.innerHTML = `<p class="avatar__image"><img src="/js_ogawa_08/assets/image/icon/member${d.avatar_id}.svg" alt=""></p>
       <p class="avatar__name">${d.avatar_name}</p>`;
 
       field.appendChild(div);
@@ -75,16 +87,16 @@ avatarCollection.onSnapshot(snapshot => {
         div.classList.add('working');
       }
       if (d.status === 2) {
-        div.classList.add('ok');
+        div.classList.add('ok', 'animate__animated', 'animate__flipInY');
       }
       if (d.status === 3) {
         div.classList.add('another');
       }
       if (d.status === 4) {
-        div.classList.add('help');
+        div.classList.add('help', 'animate__animated', 'animate__shakeY');
       }
 
-      div.innerHTML = `<p class="avatar__image"><img src="/js_ogawa_08/assets/image/member${d.avatar_id}.png" alt=""></p>
+      div.innerHTML = `<p class="avatar__image"><img src="/js_ogawa_08/assets/image/icon/member${d.avatar_id}.svg" alt=""></p>
       <p class="avatar__name">${d.avatar_name}</p>`;
 
       field.appendChild(div);
@@ -290,3 +302,22 @@ document.getElementById('logout').addEventListener('click', () => {
       console.error("Error removing document: ", error);
   });
 });
+
+// ブラウザバック禁止
+history.pushState(null, null, location.href);
+window.addEventListener('popstate', (e) => {
+  history.go(1);
+});
+
+// リロード時の処理
+if (window.performance) {
+  if (performance.navigation.type === 1) {
+    db.collection("avatars").doc(student_id).delete().then(function() {
+      console.log("Document successfully deleted!");
+      localStorage.clear();
+      window.location.href = '/js_ogawa_08/avatar/avatar_login.html';
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+  }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -978,9 +979,16 @@ staff-add section
   color: #f7f7f7;
 }
 
+#avatar_screen {
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
 #avatar_screen .field {
+  background-image: url(/js_ogawa_08/assets/image/room-image001.png);
   background-color: lightcyan;
-  width: 768px;
+  width: 750px;
   height: 500px;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -997,33 +1005,94 @@ staff-add section
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 #avatar_screen .field .avatar.working {
-  border: 10px solid green;
+  border: 10px solid gray;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 #avatar_screen .field .avatar.ok {
-  border: 10px solid gold;
+  border: 10px solid #ee9800;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  position: absolute;
+  top: -80px;
+}
+
+#avatar_screen .field .avatar.ok::after {
+  content: '👍';
+  position: absolute;
+  top: -28px;
+  left: 12px;
 }
 
 #avatar_screen .field .avatar.another {
-  border: 10px solid purple;
+  border: 10px solid #449d44;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 #avatar_screen .field .avatar.help {
-  border: 10px solid red;
+  border: 10px solid #cb2e25;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  position: absolute;
+  top: -80px;
+}
+
+#avatar_screen .field .avatar.help::after {
+  position: absolute;
+  content: '🆘';
+  position: absolute;
+  top: -28px;
+  left: 12px;
 }
 
 #avatar_screen .field .avatar__name {
-  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 1.2rem;
   position: absolute;
-  top: -15px;
-  left: 0;
+  top: -12px;
+  left: 3px;
+}
+
+#avatar_screen .field .avatar__image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #avatar_screen .field .avatar__image img {
   border-radius: 50%;
+}
+
+.control-panel {
+  margin-top: 10px;
+  width: 750px;
+  padding: 40px;
+  -webkit-box-shadow: 0 3px 6px -6px #333 inset;
+          box-shadow: 0 3px 6px -6px #333 inset;
+}
+
+.control-panel__heading {
+  font-size: 2.4rem;
+  padding: 0.5em 0;
+}
+
+.control-panel__status {
+  margin-bottom: 20px;
+}
+
+.control-panel__status p {
+  padding: 0.5em;
+}
+
+.control-panel__status button {
+  margin-right: 16px;
 }
 
 .nnc-screen {

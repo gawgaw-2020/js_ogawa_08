@@ -13,6 +13,7 @@
   <meta name="twitter:image" content="#">
   <!-- stylesheet -->
   <link rel="stylesheet" href="/js_ogawa_08/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- fontawesome -->
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- jQuery -->
@@ -64,23 +65,25 @@
     
   </div>
   <div class="control-panel">
+
     <p class="control-panel__heading">コントロールパネル</p>
     <div class="control-panel__status">
       <p>ステータス変更</p>
-        <button id="working_btn">取り組み中...</button>
-        <button id="ok_btn">理解した</button>
-        <button id="another_btn">自習中</button>
-        <button id="help_btn">ヘルプ!!</button>
+      <button id="working_btn" class="btn btn--transparent btn--link_transparent">取り組み中...</button>
+      <button id="ok_btn" class="btn btn--orange btn--link_orange">理解した</button>
+      <button id="help_btn" class="btn btn--red btn--link_red">ヘルプ!!</button>
+      <button id="another_btn" class="btn btn--green btn--link_green">自習中</button>
+    </div>
+    <form id="comment" action="#">
+      <div class="control-panel__comment text-box">
+        <label class="text-box__label" for="code">コメント</label>
+        <input id="message" class="text-box__input" type="text" name="code" autocomplete="off">
       </div>
-    </div>
-  <form id="comment" action="#">
-    <div class="control-panel__comment">
-      <p>コメント</p>
-      <input id="message" />
-    </div>
-  </form>
+    </form>
+    <div id="logout" class="btn btn--small btn--transparent btn--link_transparent card__link" href="/js_ogawa_08/avatar/avatar_logout.html">ログアウト</div>
+    <p>※リロードしてもログアウトします。</p>
+  </div>
 </main>
-<div id="logout" class="card__link" href="/js_ogawa_08/avatar/avatar_logout.html">ログアウト</div>
 
 
 <?php include(dirname(__FILE__).'/../assets/_inc/_footer.html'); ?>
