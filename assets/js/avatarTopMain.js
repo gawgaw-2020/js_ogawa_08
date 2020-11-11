@@ -310,14 +310,14 @@ window.addEventListener('popstate', (e) => {
 });
 
 // リロード時の処理
-// if (window.performance) {
-//   if (performance.navigation.type === 1) {
-//     db.collection("avatars").doc(student_id).delete().then(function() {
-//       console.log("Document successfully deleted!");
-//       localStorage.clear();
-//       window.location.href = '/js_ogawa_08/avatar/avatar_login.html';
-//     }).catch(function(error) {
-//         console.error("Error removing document: ", error);
-//     });
-//   }
-// }
+if (window.performance) {
+  if (performance.navigation.type === 1) {
+    db.collection("avatars").doc(student_id).delete().then(function() {
+      console.log("Document successfully deleted!");
+      localStorage.clear();
+      window.location.href = '/js_ogawa_08/avatar/avatar_login.html';
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+  }
+}
