@@ -58,7 +58,7 @@ formLoginBtn.addEventListener('click', function() {
             })
             .then(doc => {
               console.log(`avatar added!`);
-              alert();
+              alert('ログインに成功しました');
               window.location.href = '/js_ogawa_08/avatar/avatar_top.html';
             })
             .catch(error => {
