@@ -6,14 +6,17 @@
 製作期間：5日
 
 【受講生管理システム】
-http://oga-chan.jp/js_ogawa_08/staff-login/staff_login.html
 
-また、そのデータを用いて、授業中の個別指導をもっとスムーズにできるようなアプリを作成しました。
+<img width="1122" alt="スクリーンショット 2020-11-14 6 49 44" src="https://user-images.githubusercontent.com/70194652/99124918-6c365b80-2646-11eb-8dc7-592ddc1bd82d.png">
+<img width="50%" alt="スクリーンショット 2020-11-14 6 49 44" src="https://user-images.githubusercontent.com/70194652/99124918-6c365b80-2646-11eb-8dc7-592ddc1bd82d.png">
+
+
+
+また、そのデータを用いて、授業中の個別指導をもっとスムーズにできるようなアプリを作成しました。  
 【バーチャル教室】
 http://oga-chan.jp/js_ogawa_08/avatar/avatar_login.html
 
 # 機能概要
-アプリの説明を簡単にしますと、
 
 1つめが、受講生の情報(名前、選択したコース、受講前の情報など)か確認できます。
 主な用途としては、受講生の進捗の共有です。
