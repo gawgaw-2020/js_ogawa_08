@@ -7,8 +7,9 @@
 
 【受講生管理システム】
 
-<img width="1122" alt="スクリーンショット 2020-11-14 6 49 44" src="https://user-images.githubusercontent.com/70194652/99124918-6c365b80-2646-11eb-8dc7-592ddc1bd82d.png">
-<img width="50%" alt="スクリーンショット 2020-11-14 6 49 44" src="https://user-images.githubusercontent.com/70194652/99124918-6c365b80-2646-11eb-8dc7-592ddc1bd82d.png">
+<img width="51%" alt="スクリーンショット 2020-11-14 6 49 44" src="https://user-images.githubusercontent.com/70194652/99124918-6c365b80-2646-11eb-8dc7-592ddc1bd82d.png">
+<img width="51%" alt="スクリーンショット 2020-11-14 6 50 02" src="https://user-images.githubusercontent.com/70194652/99125066-b586ab00-2646-11eb-81d4-85c33cb1b557.png">
+<img width="51%" alt="スクリーンショット 2020-11-14 6 50 16" src="https://user-images.githubusercontent.com/70194652/99125077-b9b2c880-2646-11eb-8f3d-e7f569d84231.png">
 
 
 
