@@ -16,6 +16,8 @@
 また、そのデータを用いて、授業中の個別指導をもっとスムーズにできるようなアプリを作成しました。  
 【バーチャル教室】
 http://oga-chan.jp/js_ogawa_08/avatar/avatar_login.html
+<img width="51%" alt="スクリーンショット 2020-11-14 7 00 43" src="https://user-images.githubusercontent.com/70194652/99125383-43fb2c80-2647-11eb-82be-a11dbe31f78f.png">
+
 
 # 機能概要
 
