@@ -4,8 +4,8 @@
 
 製作期間：14日
 
-【受講生管理システム】
-https://oga-chan.jp/js_ogawa_08/staff-login/staff_login.html
+【受講生管理システム】  
+https://oga-chan.jp/js_ogawa_08/staff-login/staff_login.html  
 ※ 講師コード「14」 パスワード「aaaa」
 
 <img width="51%" alt="スクリーンショット 2020-11-14 6 49 44" src="https://user-images.githubusercontent.com/70194652/99124918-6c365b80-2646-11eb-8dc7-592ddc1bd82d.png">
